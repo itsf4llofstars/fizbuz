@@ -32,17 +32,36 @@ def product(num_one: int, num_two: int) -> int:
     return product_numbers
 
 
+def divide(num_one: float, num_two: float) -> float:
+    """Divides two numbers and return their quotiant
+
+    Args:
+        num_one (float): The numerator
+        num_two (float): The denomenator
+    
+    Return:
+        answer (float): num_one divided by num_two
+    """
+    try:
+        answer: int = num_one / num_two
+    except ZeroDivisionError as zde:
+        print(f"{zde}")
+    else:
+        return answer
+
+
 def main():
     num1: int = 23
     num2: int = 71
 
     added: int = add_numbers(num1, num2)
-
     print(f"{num1} + {num2} = {added}")
 
     product_nums: int = product(num1, num2)
     print(f"{num1} * {num2} = {product_nums}")
 
+    divided_nums: float = divide(float(num1), float(num2))
+    print(f"{num1} / {num2} = {divided_nums}")
 
 if __name__ == "__main__":
     os.system("clear")
