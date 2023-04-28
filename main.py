@@ -18,7 +18,15 @@ def add_numbers(num_one: int, num_two: int) -> int:
 
 
 def product(num_one: int, num_two: int) -> int:
-    """doc
+    """Computes the product of two numbers and returns
+    the product
+
+    Args:
+        num_one (int): One of the numbers to be multiplied
+        num_two (int): The second number to be multiplied
+
+    Return:
+        product_numbers (int): The product of the two numbers
     """
     pass
 
