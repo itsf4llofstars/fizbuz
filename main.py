@@ -33,7 +33,14 @@ def product(num_one: int, num_two: int) -> int:
 
 
 def divide(num_one: int, num_two: int) -> int:
-    """doc
+    """Divides two numbers and return their quotiant
+
+    Args:
+        num_one (int): The numerator
+        num_two (int): The denomenator
+    
+    Return:
+        answer (int): num_one divided by num_two
     """
     pass
 
