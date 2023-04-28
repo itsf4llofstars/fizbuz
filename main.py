@@ -20,8 +20,13 @@ def add_numbers(num_one: int, num_two: int) -> int:
 def main():
     num1: int = 23
     num2: int = 71
+
     added: int = add_numbers(num1, num2)
+
     print(f"{num1} + {num2} = {added}")
+
+    product_nums: int = product(num1, num2)
+    print(f"{num1} * {num2} = {product_nums}")
 
 
 if __name__ == "__main__":
