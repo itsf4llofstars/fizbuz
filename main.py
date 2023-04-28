@@ -13,7 +13,8 @@ def add_numbers(num_one: int, num_two: int) -> int:
     Return:
         added_numbers (int): The sum of the two numbers
     """
-    pass
+    added_numbers: int = num_one + num_two
+    return added_numbers
 
 
 def main():
