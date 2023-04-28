@@ -42,8 +42,12 @@ def divide(num_one: int, num_two: int) -> int:
     Return:
         answer (int): num_one divided by num_two
     """
-    answer: int = num_one / num_two
-    return answer
+    try:
+        answer: int = num_one / num_two
+    except ZeroDivisionError as zde:
+        print(f"{zde}")
+    else:
+        return answer
 
 
 def main():
