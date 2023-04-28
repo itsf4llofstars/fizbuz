@@ -3,6 +3,12 @@ import os
 import sys
 
 
+def add_numbers(num_one: int, num_two: int) -> int:
+    """doc
+    """
+    pass
+
+
 def main():
     pass
 
