@@ -18,7 +18,10 @@ def add_numbers(num_one: int, num_two: int) -> int:
 
 
 def main():
-    pass
+    num1: int = 23
+    num2: int = 71
+    added: int = add_numbers(num1, num2)
+    print(f"{num1} + {num2} = {added}")
 
 
 if __name__ == "__main__":
