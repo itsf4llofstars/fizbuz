@@ -17,6 +17,12 @@ def add_numbers(num_one: int, num_two: int) -> int:
     return added_numbers
 
 
+def product(num_one: int, num_two: int) -> int:
+    """doc
+    """
+    pass
+
+
 def main():
     num1: int = 23
     num2: int = 71
