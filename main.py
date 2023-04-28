@@ -32,6 +32,12 @@ def product(num_one: int, num_two: int) -> int:
     return product_numbers
 
 
+def divide(num_one: int, num_two: int) -> int:
+    """doc
+    """
+    pass
+
+
 def main():
     num1: int = 23
     num2: int = 71
