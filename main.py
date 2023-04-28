@@ -42,7 +42,8 @@ def divide(num_one: int, num_two: int) -> int:
     Return:
         answer (int): num_one divided by num_two
     """
-    pass
+    answer: int = num_one / num_two
+    return answer
 
 
 def main():
