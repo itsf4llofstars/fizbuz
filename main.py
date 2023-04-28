@@ -3,13 +3,8 @@ import os
 import sys
 
 
-def say_hi(string: str) -> None:
-    print(f"Hello, {string}")
-
-
 def main():
-    name: str = "Harley"
-    say_hi(name)
+    pass
 
 
 if __name__ == "__main__":
