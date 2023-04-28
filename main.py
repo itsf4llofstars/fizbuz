@@ -28,7 +28,8 @@ def product(num_one: int, num_two: int) -> int:
     Return:
         product_numbers (int): The product of the two numbers
     """
-    pass
+    product_numbers: int = num_one * num_two
+    return product_numbers
 
 
 def main():
