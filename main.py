@@ -32,15 +32,15 @@ def product(num_one: int, num_two: int) -> int:
     return product_numbers
 
 
-def divide(num_one: int, num_two: int) -> int:
+def divide(num_one: float, num_two: float) -> float:
     """Divides two numbers and return their quotiant
 
     Args:
-        num_one (int): The numerator
-        num_two (int): The denomenator
+        num_one (float): The numerator
+        num_two (float): The denomenator
     
     Return:
-        answer (int): num_one divided by num_two
+        answer (float): num_one divided by num_two
     """
     try:
         answer: int = num_one / num_two
