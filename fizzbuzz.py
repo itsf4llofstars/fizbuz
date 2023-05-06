@@ -12,3 +12,11 @@ def increase_number(number: int, value: int = 1) -> int:
         (int): The number increased by the value
     """
     return number + value
+
+
+def main():
+    pass
+
+
+if __name__ == "__main__":
+    main()
