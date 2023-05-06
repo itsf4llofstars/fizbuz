@@ -14,8 +14,12 @@ def increase_number(number: int, value: int = 1) -> int:
     return number + value
 
 
+def mod_five(number) -> bool:
+    return not number % 5
+
+
 def main():
-    pass
+    count: int = 0
 
 
 if __name__ == "__main__":
