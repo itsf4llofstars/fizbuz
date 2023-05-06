@@ -18,8 +18,24 @@ def mod_five(number) -> bool:
     return not number % 5
 
 
+def mod_three(number) -> bool:
+    return not number % 3
+
+
 def main():
     count: int = 0
+
+    while True:
+        if mod_five(count) and mod_three(count):
+            print("FIZZBUZZ")
+        elif mod_five(count) and not mod_three(count):
+            print("BUZZ")
+        elif not mod_five(count) and mod_three(count):
+            print("FIZZ")
+        elif not mod_five(count) and not mod_three(count):
+            print(count)
+
+        count = increase_number(count)
 
 
 if __name__ == "__main__":
