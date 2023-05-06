@@ -23,7 +23,7 @@ def mod_three(number) -> bool:
 
 
 def main():
-    count: int = 0
+    count: int = 1
 
     while True:
         if mod_five(count) and mod_three(count):
