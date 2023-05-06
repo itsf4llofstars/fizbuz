@@ -27,13 +27,16 @@ def main():
 
     while True:
         if mod_five(count) and mod_three(count):
-            print("FIZZBUZZ")
+            print("FIZZBUZZ", count)
         elif mod_five(count) and not mod_three(count):
-            print("BUZZ")
+            print("BUZZ", count)
         elif not mod_five(count) and mod_three(count):
-            print("FIZZ")
+            print("FIZZ", count)
         elif not mod_five(count) and not mod_three(count):
             print(count)
+
+        if count == 30:
+            break
 
         count = increase_number(count)
 
