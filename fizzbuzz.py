@@ -28,6 +28,15 @@ def mod_five(number) -> bool:
 
 
 def mod_three(number) -> bool:
+        """Returns a boolean that is oposite of the 
+    passed number module with 3.
+
+    Args:
+        number (int): The number to be checked
+    
+    Returns:
+        (bool): True if the number mod 3 is 0, False otherwise
+    """
     return not number % 3
 
 
