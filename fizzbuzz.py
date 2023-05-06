@@ -15,6 +15,15 @@ def increase_number(number: int, value: int = 1) -> int:
 
 
 def mod_five(number) -> bool:
+    """Returns a boolean that is oposite of the 
+    passed number module with 5.
+
+    Args:
+        number (int): The number to be checked
+    
+    Returns:
+        (bool): True if the number mod 5 is 0, False otherwise
+    """
     return not number % 5
 
 
