@@ -1,70 +1,35 @@
 #!/usr/bin/env python
 import os
-import sys
 
 
-def add_numbers(num_one: int, num_two: int) -> int:
-    """Adds two passed number and returns their sum
-
-    Args:
-        num_one (int): One of the numbers to be added
-        num_two (int): The second number to be added
-
-    Return:
-        added_numbers (int): The sum of the two numbers
-    """
-    added_numbers: int = num_one + num_two
-    return added_numbers
-
-
-def product(num_one: int, num_two: int) -> int:
-    """Computes the product of two numbers and returns
-    the product
+def read_full_file(filename: str):
+    """Read in an entire file and return each line in a list
 
     Args:
-        num_one (int): One of the numbers to be multiplied
-        num_two (int): The second number to be multiplied
+        filename (str): The path and filename to be read
 
-    Return:
-        product_numbers (int): The product of the two numbers
+    Returns (List[str]): A list of string each being one
+                         line of the read file
     """
-    product_numbers: int = num_one * num_two
-    return product_numbers
-
-
-def divide(num_one: float, num_two: float) -> float:
-    """Divides two numbers and return their quotiant
-
-    Args:
-        num_one (float): The numerator
-        num_two (float): The denomenator
-    
-    Return:
-        answer (float): num_one divided by num_two
-    """
+    file_lines = []
     try:
-        answer: int = num_one / num_two
-    except ZeroDivisionError as zde:
-        print(f"{zde}")
+        with open(filename, encoding="utf-8") as read:
+            lines = read.readlines()
+    except FileNotFoundError as fnfe:
+        print(f"ERROR: {fnfe}")
     else:
-        return answer
+        for line in lines:
+            file_lines.append(line.rstrip())
+    finally:
+        if file_lines:
+            return file_lines
 
 
 def main():
-    num1: int = 23
-    num2: int = 71
-
-    added: int = add_numbers(num1, num2)
-    print(f"{num1} + {num2} = {added}")
-
-    product_nums: int = product(num1, num2)
-    print(f"{num1} * {num2} = {product_nums}")
-
-    divided_nums: float = divide(float(num1), float(num2))
-    print(f"{num1} / {num2} = {divided_nums}")
+    file_name = os.path.expanduser(os.path.join("~", "ed", "file.txt"))
+    files_lines = read_full_file(file_name)
+    [print(line) for line in files_lines]
 
 
 if __name__ == "__main__":
-    os.system("clear")
-
-    sys.exit(main())
+    main()
