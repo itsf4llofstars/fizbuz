@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """main.py"""
+import sys
 import os
 
 
@@ -30,6 +31,8 @@ def read_file(filename: str):
 
 
 def main():
+    os.system("clear")
+
     file_name = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "main.py"))
     files_lines = read_file(file_name)
     
@@ -38,4 +41,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
