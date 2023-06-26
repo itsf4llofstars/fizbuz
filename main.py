@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """main.py"""
-import sys
 import os
+import sys
 
 
 def read_file(filename: str):
@@ -31,11 +31,12 @@ def read_file(filename: str):
 
 
 def main():
+    """main"""
     os.system("clear")
 
     file_name = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "main.py"))
     files_lines = read_file(file_name)
-    
+
     for i, line in enumerate(files_lines):
         print(f"{i} {line}")
 
