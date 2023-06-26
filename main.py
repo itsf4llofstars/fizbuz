@@ -32,7 +32,9 @@ def read_file(filename: str):
 def main():
     file_name = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "main.py"))
     files_lines = read_file(file_name)
-    [print(line) for line in files_lines]
+    
+    for i, line in enumerate(files_lines):
+        print(f"{i} {line}")
 
 
 if __name__ == "__main__":
