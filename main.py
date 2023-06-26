@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """main.py"""
 import os
+import sys
 
 
 def read_file(filename: str):
@@ -30,10 +31,15 @@ def read_file(filename: str):
 
 
 def main():
-    file_name = os.path.expanduser(os.path.join("~", "ed", "file.txt"))
+    """main"""
+    os.system("clear")
+
+    file_name = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "main.py"))
     files_lines = read_file(file_name)
-    [print(line) for line in files_lines]
+
+    for i, line in enumerate(files_lines):
+        print(f"{i} {line}")
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
