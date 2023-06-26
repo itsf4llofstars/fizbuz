@@ -3,7 +3,7 @@
 import os
 
 
-def read_full_file(filename: str):
+def read_file(filename: str):
     """Read in an entire file and return each line in a list
 
     Args:
@@ -28,7 +28,7 @@ def read_full_file(filename: str):
 
 def main():
     file_name = os.path.expanduser(os.path.join("~", "ed", "file.txt"))
-    files_lines = read_full_file(file_name)
+    files_lines = read_file(file_name)
     [print(line) for line in files_lines]
 
 
