@@ -4,13 +4,15 @@ import os
 
 
 def read_file(filename: str):
-    """Read in an entire file and return each line in a list
+    """Read in an entire file and return a list of each
+    file line
 
     Args:
         filename (str): The path and filename to be read
 
-    Returns (List[str]): A list of string each being one
-                         line of the read file
+    Returns:
+        (List[str]): A list of strings each being one
+                     line of the read file
     """
     file_lines = []
     try:
