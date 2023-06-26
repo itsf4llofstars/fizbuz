@@ -1,15 +1,18 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+"""main.py"""
 import os
 
 
-def read_full_file(filename: str):
-    """Read in an entire file and return each line in a list
+def read_file(filename: str):
+    """Read in an entire file and return a list of each
+    file line
 
     Args:
         filename (str): The path and filename to be read
 
-    Returns (List[str]): A list of string each being one
-                         line of the read file
+    Returns:
+        (List[str]): A list of strings each being one
+                     line of the read file
     """
     file_lines = []
     try:
@@ -20,14 +23,15 @@ def read_full_file(filename: str):
     else:
         for line in lines:
             file_lines.append(line.rstrip())
-    finally:
-        if file_lines:
-            return file_lines
+
+    if file_lines:
+        return file_lines
+    return None
 
 
 def main():
     file_name = os.path.expanduser(os.path.join("~", "ed", "file.txt"))
-    files_lines = read_full_file(file_name)
+    files_lines = read_file(file_name)
     [print(line) for line in files_lines]
 
 
