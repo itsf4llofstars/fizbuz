@@ -23,9 +23,10 @@ def read_file(filename: str):
     else:
         for line in lines:
             file_lines.append(line.rstrip())
-    finally:
-        if file_lines:
-            return file_lines
+
+    if file_lines:
+        return file_lines
+    return None
 
 
 def main():
