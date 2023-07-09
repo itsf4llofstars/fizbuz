@@ -139,13 +139,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut feugiat.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut feugiat.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut feugiat.
 
-
-
-
-
-
-
-
-
 [^1]: First foot note.
 [^2]: Seconnd foot note.
