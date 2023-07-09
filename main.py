@@ -1,5 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+"""main.py"""
 import os
+import sys
 
 
 def read_full_file(filename: str):
@@ -41,4 +43,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
