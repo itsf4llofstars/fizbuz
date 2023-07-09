@@ -4,41 +4,42 @@ import os
 import sys
 
 
-def read_file(filename: str):
-    """Read in an entire file and return a list of each
-    file line
+def read_full_file(filename: str):
+    """Read in an entire file and return each line as a list
 
     Args:
         filename (str): The path and filename to be read
 
-    Returns:
-        (List[str]): A list of strings each being one
-                     line of the read file
+    Returns
+        (List[str]): A list of string each being one line
+                     of the read file
     """
+
     file_lines = []
+
     try:
         with open(filename, encoding="utf-8") as read:
             lines = read.readlines()
     except FileNotFoundError as fnfe:
-        print(f"ERROR: {fnfe}")
+        raise fnfe
     else:
         for line in lines:
             file_lines.append(line.rstrip())
 
-    if file_lines:
-        return file_lines
-    return None
+    return file_lines
 
 
 def main():
     """main"""
-    os.system("clear")
+    file_name = os.path.expanduser(os.path.join("~", "ed", "file.txt"))
+    files_lines = read_full_file(file_name)
 
-    file_name = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "main.py"))
-    files_lines = read_file(file_name)
+    for line in files_lines:
+        print(line)
 
-    for i, line in enumerate(files_lines):
-        print(f"{i} {line}")
+    print()
+
+    [print(line) for line in files_lines]
 
 
 if __name__ == "__main__":
