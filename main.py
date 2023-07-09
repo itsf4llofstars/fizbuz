@@ -1,50 +1,45 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
+"""main.py"""
 import os
 import sys
 
 
-def add_numbers(num_one: int, num_two: int) -> int:
-    """Adds two passed number and returns their sum
+def read_file(filename: str):
+    """Read in an entire file and return a list of each
+    file line
 
     Args:
-        num_one (int): One of the numbers to be added
-        num_two (int): The second number to be added
+        filename (str): The path and filename to be read
 
-    Return:
-        added_numbers (int): The sum of the two numbers
+    Returns:
+        (List[str]): A list of strings each being one
+                     line of the read file
     """
-    added_numbers: int = num_one + num_two
-    return added_numbers
+    file_lines = []
+    try:
+        with open(filename, encoding="utf-8") as read:
+            lines = read.readlines()
+    except FileNotFoundError as fnfe:
+        print(f"ERROR: {fnfe}")
+    else:
+        for line in lines:
+            file_lines.append(line.rstrip())
 
-
-def product(num_one: int, num_two: int) -> int:
-    """Computes the product of two numbers and returns
-    the product
-
-    Args:
-        num_one (int): One of the numbers to be multiplied
-        num_two (int): The second number to be multiplied
-
-    Return:
-        product_numbers (int): The product of the two numbers
-    """
-    product_numbers: int = num_one * num_two
-    return product_numbers
+    if file_lines:
+        return file_lines
+    return None
 
 
 def main():
-    num1: int = 23
-    num2: int = 71
+    """main"""
+    os.system("clear")
 
-    added: int = add_numbers(num1, num2)
+    file_name = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "main.py"))
+    files_lines = read_file(file_name)
 
-    print(f"{num1} + {num2} = {added}")
-
-    product_nums: int = product(num1, num2)
-    print(f"{num1} * {num2} = {product_nums}")
+    for i, line in enumerate(files_lines):
+        print(f"{i} {line}")
 
 
 if __name__ == "__main__":
-    os.system("clear")
-
     sys.exit(main())

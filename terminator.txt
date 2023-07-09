@@ -1,0 +1,21 @@
+TERMINATOR
+
+New Process                     <W>i
+Reset                           <SC>r
+
+Terminal
+Window[new|close]               <SC>[I|q]
+Cycle Term[nxt|prev]            [<CT>|<SCT>]
+Focus Term[d|u|r|l]             <M>[dwn|up|rte|lft]
+Focus Term[nxt|prev]            <SC>[n|p]
+
+Tab
+New                             <SC>t
+Move[lft|rte]                   <SC>[pgu|pgd]
+Cycle[nxt|prev]                 <C>[pgd|pgu]
+
+Splits
+Split[h|v]                      <SC>[o|e]
+Select[d|u|r|l]                 <M>[dwn|up|rte|lft]
+Resize[d|u|r|l]                 <SC>[dwn|up|rte|lft]
+Rotate[ccw|cw]                  [<SW>r|<W>r]
