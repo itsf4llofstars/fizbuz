@@ -24,9 +24,9 @@ def read_file(filename: str) -> object:
             raw_lines = read.readlines()
     except FileNotFoundError as fnfe:
         raise fnfe
-    else:
-        for line in raw_lines:
-            file_lines.append(line.rstrip())
+
+    for line in raw_lines:
+        file_lines.append(line.rstrip())
 
     return file_lines
 
