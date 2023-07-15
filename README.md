@@ -13,6 +13,8 @@ and GitHub.<br>
 
 - working branch deleted June 26, 2023 1409Z
 - Edits made on the Github created git-hub branch June 26, 2023 1423Z
+- Files and code erased to start new, with Github actions
+- This clone is in ~/ed
 
 ---
 
