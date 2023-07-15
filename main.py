@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """main.py"""
 import os
-import sys
 
 
-def main(args) -> None:
+def main() -> None:
     """main"""
     print("Hello, world!")
 
@@ -12,4 +11,4 @@ def main(args) -> None:
 if __name__ == "__main__":
     os.system("clear")
 
-    sys.exit(main(sys.argv))
+    main()
