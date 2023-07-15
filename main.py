@@ -17,31 +17,25 @@ def read_file(filename: str) -> object:
         list[str]: List of the the read files lines
     """
 
-    file_lines = []
-
     try:
         with open(filename, encoding="utf-8") as read:
             raw_lines = read.readlines()
     except FileNotFoundError as fnfe:
         raise fnfe
-    else:
-        for line in raw_lines:
-            file_lines.append(line.rstrip())
 
-    return file_lines
+    for i, line in enumerate(raw_lines):
+        raw_lines[i] = line.replace(line[-1], "")
+
+    return raw_lines
 
 
 def main() -> None:
     """main"""
-    files_name: str = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "README.md"))
+    files_name: str = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "cats.sh"))
     readme_lines = read_file(files_name)
 
     for line in readme_lines:
         print(line)
-
-    input()
-
-    [print(line) for line in readme_lines]
 
 
 if __name__ == "__main__":
