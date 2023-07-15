@@ -39,6 +39,10 @@ def main() -> None:
     for line in readme_lines:
         print(line)
 
+    input()
+
+    [print(line) for line in readme_lines]
+
 
 if __name__ == "__main__":
     os.system("clear")
