@@ -33,7 +33,11 @@ def read_file(filename: str) -> object:
 
 def main() -> None:
     """main"""
-    print("Hello, world!")
+    files_name: str = os.path.expanduser(os.path.join("~", "ed", "fizbuz", "README.md"))
+    readme_lines = read_file(files_name)
+
+    for line in readme_lines:
+        print(line)
 
 
 if __name__ == "__main__":
