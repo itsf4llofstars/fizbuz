@@ -4,6 +4,19 @@ import os
 
 
 def read_file(filename: str) -> object:
+    """Read in a file and return it's lines in a
+    list with the newline characters sripped off
+
+    Args:
+        filename (str): The path and name of the file
+
+    Raises:
+        fnfe: Raised if the file does not exist
+
+    Returns:
+        list[str]: List of the the read files lines
+    """
+
     file_lines = []
 
     try:
