@@ -25,9 +25,9 @@ and GitHub.<br>
 <BLANK LINE>
 <footer>
 
-docs:(coc.txt): Correct spelling `resutl` to `result`
+docs(coc.txt): Correct spelling `resutl` to `result`
 
-Correct spelling error in doc/coc.txt Line: 2379<br>
+Correct spelling error in doc/coc.txt, Line: 2379<br>
 resutl was corrected to result
 
 ```text
