@@ -2,7 +2,7 @@
 """main.py"""
 
 
-def main() -> None:
+def main():
     """main"""
     print("Hello, world!")
 
