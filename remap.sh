@@ -23,5 +23,3 @@ elif [ "$1" == "-t" ]; then
 else
     printf "Command line arg -e (to esc), -c (to caps-lock), -t (to control) needed.\n"
 fi
-
-# cat remap.sh | head -n 12
